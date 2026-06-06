@@ -1,0 +1,49 @@
+# Consolidated requirements for all chapters (apE, ch01-ch11).
+# Install into a single virtual environment instead of one per folder.
+#
+# Note on version conflicts resolved here:
+# - tiktoken: ch03 pins 0.11.0, ch11 pins 0.9.0 -> using 0.11.0 (newer).
+# - bs4 (ch04, ch05) is a meta-package for beautifulsoup4; using
+#   beautifulsoup4==4.12.1 (from ch11) covers both.
+# - lxml: chapters pin 5.4.0, but ddgs 9.5.5 requires lxml>=6.0.0 and
+#   5.4.0 has no Python 3.14 wheels. Relaxed to >=6.0.0.
+# - tiktoken: 0.11.0 has no Python 3.14 prebuilt wheel (source build
+#   needs Rust). Relaxed to >=0.11.0 so pip picks a wheel for cp314.
+# - notebook: intentionally omitted per user request.
+
+# --- LangChain core stack ---
+langchain==1.0.3
+langchain-openai==1.0.1
+langchain-community==0.4.1
+langchain-chroma==1.0.0
+langgraph==1.0.2
+langgraph-supervisor==0.0.30
+langchain-mcp-adapters==0.1.12
+
+# --- OpenAI / tokenization ---
+openai==2.6.1
+tiktoken>=0.11.0
+
+# --- Vector store ---
+chromadb==1.3.0
+
+# --- Document loaders / parsing ---
+wikipedia==1.4.0
+docx2txt==0.9
+pypdf==6.0.0
+lxml>=6.0.0
+html2text==2025.4.15
+beautifulsoup4==4.12.1
+
+# --- HTTP / web ---
+requests==2.32.5
+aiohttp==3.12.13
+
+# --- Search tools ---
+duckduckgo-search==7.5.0
+ddgs==9.5.5
+
+# --- Misc ---
+lark==1.2.2
+python-dotenv==1.1.1
+fastmcp==2.10.5
