@@ -42,9 +42,9 @@ Now that you have understood all the above, select the correct reserach assistan
 Question: {user_question}
 Response:
 
-""" 
+"""
 
-ASSISTANT_SELECTION_PROMPT_TEMPLATE = PromptTemplate.from_template( 
+ASSISTANT_SELECTION_PROMPT_TEMPLATE = PromptTemplate.from_template(
     template=ASSISTANT_SELECTION_INSTRUCTIONS
 )
 
