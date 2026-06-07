@@ -111,3 +111,5 @@ ch11/.env
 **/**.env*
 
 **/.vscode
+
+**/__pycache__
