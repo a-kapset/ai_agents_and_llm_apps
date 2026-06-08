@@ -1,5 +1,6 @@
 #environments
 .full-env
+.venv-project
 
 apE/env_ape/
 ch01/env_ch01/
